@@ -1,6 +1,7 @@
 import express from 'express';
 import userRoutes from './routes/auth.routes.js';
 import productRoutes from './routes/product.route.js';
+import cartRoutes from './routes/product.route.js';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
@@ -24,6 +25,7 @@ app.use(cookieParser());
 
 app.use('/api/user',userRoutes);
 app.use('/api/product',productRoutes);
+app.use('/api/cart', cartRoutes);
 
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
