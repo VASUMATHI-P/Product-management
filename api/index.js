@@ -1,7 +1,7 @@
 import express from 'express';
 import userRoutes from './routes/auth.routes.js';
 import productRoutes from './routes/product.route.js';
-import cartRoutes from './routes/product.route.js';
+import cartRoutes from './routes/cart.route.js';
 import mongoose from 'mongoose';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
@@ -23,8 +23,8 @@ mongoose
 app.use(express.json());
 app.use(cookieParser());
 
-app.use('/api/user',userRoutes);
-app.use('/api/product',productRoutes);
+app.use('/api/auth',userRoutes);
+app.use('/api/products',productRoutes);
 app.use('/api/cart', cartRoutes);
 
 app.use((err, req, res, next) => {
