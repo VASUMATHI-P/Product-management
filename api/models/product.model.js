@@ -19,11 +19,15 @@ const productSchema = new mongoose.Schema(
     image: {
       type: String,
       default:
-        'https://www.hostinger.com/tutorials/wp-content/uploads/sites/2/2021/09/how-to-write-a-blog-product.png',
+        'https://tse3.mm.bing.net/th?id=OIP.yibaLwUlAfTNs2XYECgRBQHaE8&pid=Api&P=0&h=180',
     },
     rating: {
       type: Number,
       default: '5',
+    }, 
+    quantity: {
+      type: Number,
+      default: 1
     }
   },
   { timestamps: true }
